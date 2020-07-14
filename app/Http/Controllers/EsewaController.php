@@ -74,8 +74,6 @@ class EsewaController extends Controller
             'productCode' => $request->get('oid'),
         ]);
 
-        dd($response->isSuccessful(), $response->getResponseText());
-
         if ($response->isSuccessful()) {
             $order->update([
                 'transaction_id' => $request->get('refId'),
